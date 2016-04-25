@@ -9,7 +9,7 @@ window.onload = function(){
 
 		animate:false,
 		animationInterval:null,
-		animationSpeed:20000,
+		animationSpeed:600,
 
 		//(same as onresize function)
 		size:function(){
