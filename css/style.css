@@ -17,14 +17,14 @@ svg {
 	width:100%;
 	}
 
-#tp_soc_prop circle {
+#uncertain circle {
 	stroke:white;
 	stroke-width:4;
 	stroke-dasharray:1,1;
 	}
-#tp_soc_prop g#main circle {
+/*#tp_soc_prop g#main circle {
 	stroke-width:5;
-	}
+	}*/
 
 /*	----------------------------------
 	Show & hide
@@ -34,31 +34,19 @@ svg {
 ._2,
 ._3,
 ._4,
-._5,
-._6,
-._7 {
+._5 {
 	opacity:0;
 	-webkit-transition:opacity 300ms ease;
     -moz-transition:opacity 300ms ease;
     -ms-transition:opacity 300ms ease;
     transition:opacity 300ms ease;
 	}
-._7 path {
-	-webkit-transition:stroke-dashoffset 300ms ease;
-    -moz-transition:stroke-dashoffset 300ms ease;
-    -ms-transition:stroke-dashoffset 300ms ease;
-    transition:stroke-dashoffset 300ms ease;
-	}
 ._1.show path,
 ._2.show,
 ._3.show,
 ._4.show,
-._5.show,
-._6.show,
-._7.show {
+._5.show {
 	opacity:1;
-	}
-._7.show path {
 	}
 ._4.show.alpha {
 	opacity:0.5;
