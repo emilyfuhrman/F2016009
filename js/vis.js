@@ -72,7 +72,7 @@ window.onload = function(){
 			self.slider = $('#slider').slider({
 				value:1,
 				min:1,
-				max:5,
+				max:10,
 				slide:function(event, ui){
 					self.update(ui.value);
 					self.manual = true;
@@ -101,11 +101,11 @@ window.onload = function(){
 		generate:function(){
 			var self = this;
 
-			//1 - g#center_1_
-			//2 - g#tp_nonsoc, g#tp_nonsoc_labels
-			//3 - g#tp_soc_existing, g#tp_soc_existing_labels
-			//4 - g#tp_soc_prop, g#tp_soc_prop_labels
-			//5 - g#paths_u
+			//created
+			//cc_adv
+			//cc_pub
+			//cur_comm
+			//cur_pub
 
 			self.update(self.slider.slider('value'));
 		},
@@ -115,18 +115,33 @@ window.onload = function(){
 
 			if(s == 1){
 				d3.selectAll('._1').classed('show',true);
-				d3.selectAll('._2, ._3, ._4, ._5').classed('show',false);
+				d3.selectAll('._2, ._3, ._4, ._5, ._6, ._7, ._8, ._9, ._10').classed('show',false);
 			} else if(s == 2){
 				d3.selectAll('._1, ._2').classed('show',true);
-				d3.selectAll('._3, ._4, ._5').classed('show',false);
+				d3.selectAll('._3, ._4, ._5, ._6, ._7, ._8, ._9, ._10').classed('show',false);
 			} else if(s == 3){
 				d3.selectAll('._1, ._2, ._3').classed('show',true);
-				d3.selectAll('._4, ._5').classed('show',false);
+				d3.selectAll('._4, ._5, ._6, ._7, ._8, ._9, ._10').classed('show',false);
 			} else if(s == 4){
 				d3.selectAll('._1, ._2, ._3, ._4').classed('show',true);
-				d3.selectAll('._5').classed('show',false);
+				d3.selectAll('._5, ._6, ._7, ._8, ._9, ._10').classed('show',false);
 			} else if(s == 5){
 				d3.selectAll('._1, ._2, ._3, ._4, ._5').classed('show',true);
+				d3.selectAll('._6, ._7, ._8, ._9, ._10').classed('show',false);
+			} else if(s == 6){
+				d3.selectAll('._1, ._2, ._3, ._4, ._6').classed('show',true);
+				d3.selectAll('._5, ._7, ._8, ._9, ._10').classed('show',false);
+			} else if(s == 7){
+				d3.selectAll('._1, ._2, ._3, ._4, ._7').classed('show',true);
+				d3.selectAll('._5, ._6, ._8, ._9, ._10').classed('show',false);
+			} else if(s == 8){
+				d3.selectAll('._1, ._2, ._3, ._4, ._8').classed('show',true);
+				d3.selectAll('._5, ._6, ._7, ._9, ._10').classed('show',false);
+			} else if(s == 9){
+				d3.selectAll('._1, ._2, ._3, ._4, ._9').classed('show',true);
+				d3.selectAll('._5, ._6, ._7, ._8, ._10').classed('show',false);
+			} else if(s == 10){
+				d3.selectAll('._1, ._2, ._3, ._4, ._5, ._6, ._7, ._8, ._9, ._10').classed('show',true);
 			}
 		},
 		playAnimation:function(){
@@ -137,7 +152,7 @@ window.onload = function(){
 					val_new;
 
 				//count up state of slider
-				if(val_current === 5){
+				if(val_current === 10){
 					if(!self.manual){
 						val_new = null
 					} else{

@@ -31,7 +31,12 @@ svg {
 ._2,
 ._3,
 ._4,
-._5 {
+._5,
+._6,
+._7,
+._8,
+._9,
+._10 {
 	opacity:0;
 	-webkit-transition:opacity 300ms ease;
     -moz-transition:opacity 300ms ease;
@@ -42,11 +47,13 @@ svg {
 ._2.show,
 ._3.show,
 ._4.show,
-._5.show {
+._5.show,
+._6.show,
+._7.show,
+._8.show,
+._9.show,
+._10.show {
 	opacity:1;
-	}
-._4.show.alpha {
-	opacity:0.5;
 	}
 
 ._1 path,
